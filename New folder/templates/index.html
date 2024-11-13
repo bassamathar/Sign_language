@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Streaming</title>
+</head>
+<body>
+    <h1>Welcome to sign language detector</h1>
+    <h6>Yess I know I need to learn front end</h6>
+    <div>
+        <img src="{{ url_for('video') }}" width="50%" />
+    </div>
+
+    <h3>These are detected class names</h3>
+    <div>
+        <ul>
+            {% for class_name in detected_class_names %}
+            <li>
+                {{class_name}}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
